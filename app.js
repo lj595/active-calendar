@@ -1,23 +1,5 @@
 // ===== DATA =====
-let events = [
-  { id: 1, date: '2026-03-22', content: '文体游戏\n劳动谋划与畅想', category: '体育', color: '#6c63ff' },
-  { id: 2, date: '2026-03-29', content: '种地活动（全员参与）。播种翻地', category: '劳育', color: '#43d9ad' },
-  { id: 3, date: '2026-04-05', content: '种地活动（全员参与）。第二波播种翻地\n清明特色习俗活动。艾草、踏青、青团\n纪念革命烈士', category: '德育', color: '#43d9ad' },
-  { id: 4, date: '2026-04-12', content: '美育。赏花写诗活动；写作课\n；种地活动', category: '美育', color: '#ff6584' },
-  { id: 5, date: '2026-04-19', content: '种地活动', category: '劳育', color: '#43d9ad' },
-  { id: 6, date: '2026-04-26', content: '文体', category: '体育', color: '#f59e0b' },
-  { id: 7, date: '2026-05-02', content: '五一：学习目的讨论', category: '德育', color: '#8b5cf6' },
-  { id: 8, date: '2026-05-03', content: '五一：学期机器人项目，eg. 机器人', category: '智育', color: '#0ea5e9' },
-  { id: 9, date: '2026-05-04', content: '五一：菜地劳动', category: '劳育', color: '#43d9ad' },
-  { id: 10, date: '2026-05-10', content: '母亲节活动（德育）', category: '德育', color: '#8b5cf6' },
-  { id: 11, date: '2026-05-17', content: '做风筝', category: '美育', color: '#ff6584' },
-  { id: 12, date: '2026-05-24', content: '种地活动', category: '劳育', color: '#43d9ad' },
-  { id: 13, date: '2026-05-31', content: '草地音乐节', category: '美育', color: '#f59e0b' },
-  { id: 14, date: '2026-06-07', content: '种地活动', category: '劳育', color: '#43d9ad' },
-  { id: 15, date: '2026-06-14', content: '参观（未确定）', category: '德育', color: '#8b5cf6' },
-  { id: 16, date: '2026-06-19', content: '劳育：包粽子', category: '劳育', color: '#ec4899' },
-  { id: 17, date: '2026-06-28', content: '种地活动：卖菜实践', category: '劳育', color: '#43d9ad' },
-];
+let events = [{ "id": 1, "date": "2026-03-22", "content": "文体游戏\n劳动谋划与畅想", "category": "体育", "color": "#6c63ff" }, { "id": 2, "date": "2026-03-29", "content": "种地活动（全员参与）。播种翻地", "category": "劳育", "color": "#43d9ad" }, { "id": 3, "date": "2026-04-04", "content": "清明活动，寻找春天的美好", "category": "美育", "color": "#ff6584" }, { "id": 4, "date": "2026-04-12", "content": "待定；种地活动", "category": "其他", "color": "#64748b" }, { "id": 5, "date": "2026-04-19", "content": "种地活动", "category": "劳育", "color": "#43d9ad" }, { "id": 6, "date": "2026-04-26", "content": "放风筝", "category": "智育", "color": "#0ea5e9" }, { "id": 8, "date": "2026-05-01", "content": "五一：学期机器人项目，eg. 机器人", "category": "智育", "color": "#0ea5e9" }, { "id": 9, "date": "2026-05-01", "content": "五一：劳动类活动", "category": "劳育", "color": "#43d9ad" }, { "id": 7, "date": "2026-05-02", "content": "五一：学习目的讨论", "category": "德育", "color": "#8b5cf6" }, { "id": 10, "date": "2026-05-10", "content": "母亲节活动", "category": "德育", "color": "#8b5cf6" }, { "id": 11, "date": "2026-05-17", "content": "待定", "category": "其他", "color": "#64748b" }, { "id": 12, "date": "2026-05-24", "content": "种地活动", "category": "劳育", "color": "#43d9ad" }, { "id": 13, "date": "2026-05-31", "content": "草地音乐节", "category": "美育", "color": "#f59e0b" }, { "id": 14, "date": "2026-06-07", "content": "种地活动", "category": "劳育", "color": "#43d9ad" }, { "id": 15, "date": "2026-06-14", "content": "参观（待定）", "category": "智育", "color": "#0ea5e9" }, { "id": 16, "date": "2026-06-19", "content": "劳育：包粽子", "category": "劳育", "color": "#ec4899" }, { "id": 17, "date": "2026-06-28", "content": "种地活动：卖菜实践", "category": "劳育", "color": "#43d9ad" }]
 
 let nextId = 18;
 
