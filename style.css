@@ -454,7 +454,9 @@ body {
   grid-template-columns: repeat(7, 1fr);
 }
 .cal-day-cell {
-  min-height: 120px;
+  height: 130px;
+  max-height: 130px;
+  overflow: hidden;
   border-right: 1px solid rgba(255,255,255,0.04);
   border-bottom: 1px solid rgba(255,255,255,0.04);
   padding: 8px 6px;
@@ -496,12 +498,16 @@ body {
 }
 
 .cal-event-chip {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-size: 11px;
   line-height: 1.4;
   padding: 4px 6px;
   border-radius: 4px;
   margin-bottom: 4px;
+  white-space: normal;
   word-wrap: break-word;
   color: #fff;
   font-weight: 500;
@@ -659,17 +665,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .timeline-events { grid-template-columns: 1fr; }
   .view-controls { flex-direction: column; align-items: flex-start; }
   .header-content { flex-direction: column; align-items: flex-start; }
-  .cal-day-cell { min-height: 90px; }
+  .cal-day-cell { height: 100px; max-height: 100px; overflow: hidden; }
   .cal-event-chip { 
-    display: block; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    white-space: normal;
     font-size: 8px; 
     padding: 2px 4px; 
     margin-bottom: 2px;
     line-height: 1.2; 
     letter-spacing: -0.5px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
   .cal-day-cell.has-event { outline: 1px solid rgba(108,99,255,0.5); outline-offset: -1px; }
 }
