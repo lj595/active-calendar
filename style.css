@@ -659,9 +659,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .timeline-events { grid-template-columns: 1fr; }
   .view-controls { flex-direction: column; align-items: flex-start; }
   .header-content { flex-direction: column; align-items: flex-start; }
-  .cal-day-cell { min-height: 60px; }
-  .cal-event-chip { display: none; }
-  .cal-day-cell.has-event { outline: 2px solid rgba(108,99,255,0.5); outline-offset: -2px; }
+  .cal-day-cell { min-height: 90px; }
+  .cal-event-chip { 
+    display: block; 
+    font-size: 8px; 
+    padding: 2px 4px; 
+    margin-bottom: 2px;
+    line-height: 1.2; 
+    letter-spacing: -0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .cal-day-cell.has-event { outline: 1px solid rgba(108,99,255,0.5); outline-offset: -1px; }
 }
 @media (max-width: 480px) {
   .app-wrapper { padding: 0 12px 40px; }
