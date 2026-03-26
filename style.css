@@ -500,7 +500,8 @@ body {
 .cal-event-chip {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   overflow: hidden;
   font-size: 11px;
   line-height: 1.4;
@@ -669,7 +670,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .cal-event-chip { 
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
     overflow: hidden;
     white-space: normal;
     font-size: 8px; 
