@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>幸福育见活动日历 2026春</title>
+  <meta name="description" content="可视化班级活动日历，涵盖2026年春季学期丰富活动安排" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background particles -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <div class="app-wrapper">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-glow"></div>
+      <div class="header-content">
+        <div class="header-left">
+          <div class="logo-icon">📅</div>
+          <div class="header-text">
+            <h1 class="app-title">幸福育见活动日历</h1>
+            <p class="app-subtitle">2026 春季学期 · 精彩活动安排</p>
+          </div>
+        </div>
+        <div class="header-controls">
+          <button class="btn btn-add" id="btnAddEvent" title="添加新活动">
+            <span class="btn-icon">✦</span> 添加活动
+          </button>
+          <button class="btn btn-export" id="btnExport" title="导出数据">
+            <span class="btn-icon">⬇</span> 导出
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <span class="stat-number" id="statTotal">17</span>
+        <span class="stat-label">总活动数</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="statMonths">4</span>
+        <span class="stat-label">覆盖月份</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="statUpcoming">—</span>
+        <span class="stat-label">即将开始</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="statCategories">6</span>
+        <span class="stat-label">活动类型</span>
+      </div>
+    </div>
+
+    <!-- View Toggle -->
+    <div class="view-controls">
+      <div class="view-toggle">
+        <button class="view-btn active" id="btnTimeline" data-view="timeline">
+          <span>▶</span> 时间轴
+        </button>
+        <button class="view-btn" id="btnGrid" data-view="grid">
+          <span>⊞</span> 月历视图
+        </button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">筛选月份：</span>
+        <select id="monthFilter" class="filter-select">
+          <option value="all">全部</option>
+          <option value="3">3月</option>
+          <option value="4">4月</option>
+          <option value="5">5月</option>
+          <option value="6">6月</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Timeline View -->
+      <div id="timelineView" class="view-panel active">
+        <div class="month-sections" id="monthSections"></div>
+      </div>
+
+      <!-- Grid View -->
+      <div id="gridView" class="view-panel">
+        <div class="calendar-grid-wrapper" id="calendarGridWrapper"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Event Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="eventModal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">编辑活动</h2>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">活动日期</label>
+          <input type="date" class="form-input" id="inputDate" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">活动内容</label>
+          <textarea class="form-textarea" id="inputContent" rows="4" placeholder="请输入活动详细内容…"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">活动分类</label>
+          <div class="category-picker" id="categoryPicker"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">活动颜色</label>
+          <div class="color-picker" id="colorPicker"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-delete" id="btnDelete" style="display:none;">🗑 删除</button>
+        <div class="modal-footer-right">
+          <button class="btn btn-cancel" id="btnCancel">取消</button>
+          <button class="btn btn-save" id="btnSave">保存活动</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
